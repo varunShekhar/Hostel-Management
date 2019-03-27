@@ -41,6 +41,8 @@ public class Hostel{
 		               String checkName = splited[0];
 		               //write your code here !!!
 //		               compare check name with name and return true if present and false if not
+		               if(checkName.equals(name))
+		            	   return false;
 	               }
 	               
 	               
@@ -49,8 +51,8 @@ public class Hostel{
 	            }
 			return true;
 	   }
-       public static void allotHostel(){
-    	   //write your code here!!!
+       public static void allotHostel()throws IOException{
+    	   writedata();
     	   
        }
 
@@ -74,9 +76,8 @@ public class Hostel{
            
        public static boolean verifyName(String name){
     	   boolean chk = true;
-    	   
-    	   //write your code here
-    	   
+    	   if(readData(name))
+    		   chk=false;
     	   return chk;
         }
         
